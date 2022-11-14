@@ -1,0 +1,50 @@
+public  class  ConteoTiposCaracteres {
+
+    public  static  void  main ( String [] args ) {
+        
+        String  texto = "¡Java v.8.0 es genial!" ;
+        Resultado  resultado = contarTiposCaracteres ( texto );
+        
+        sistema _ fuera _ println ( "Cantidad de letras en el texto: " + texto . length ());
+        sistema _ fuera _ println ( "Cantidad de letras: " + resultado . contadorLetras ); // 13
+        sistema _ fuera _ println ( "Cantidad de numeros: " + resultado . contadorNumeros ); // 2
+        sistema _ fuera _ println ( "Cantidad de espacios: " + resultado . contadorEspacios );  // 3
+        sistema _ fuera _ println ( "Cantidad de otros caracteres: " + resultado . contadorOtrosCaracteres ); // 4
+    }
+    
+    public  static  Resultado  contarTiposCaracteres ( String  texto ) {
+        int  contadorLetras = 0 ;
+        int  contadorNumeros = 0 ;
+        int  contadorEspacios = 0 ;
+        int  contadorOtrosCaracteres = 0 ;
+        
+        char [] caracteres = texto . aArrayChar ();
+        
+        for ( int  i = 0 ; i < caracteres . longitud ; i ++) {
+            if ( Carácter . esLetra ( caracteres [ i ])) {
+                ++ contadorLetras ;
+            } else  if ( Carácter . esDigit ( caracteres [ i ])) {
+                ++ contadorNumeros ;
+            } else  if ( Carácter . isSpaceChar ( caracteres [ i ])) {
+                ++ contador Espacios ;
+            } más {
+                ++ contadorOtrosCaracteres ;
+            }
+        }
+        
+         resultado = nuevo  Resultado ( );
+        resultado _ contadorLetras = contadorLetras ;
+        resultado _ contadorNumeros = contadorNumeros ;
+        resultado _ contadorEspacios = contadorEspacios ;
+        resultado _ contadorOtrosCaracteres = contadorOtrosCaracteres ;
+        
+        devolver  resultado ;
+    }
+}
+
+ resultado de la clase {
+    public  int  contadorLetras ;
+    public  int  contadorNumeros ;
+    public  int  contadorEspacios ;
+    public  int  contadorOtrosCaracteres ;
+}
